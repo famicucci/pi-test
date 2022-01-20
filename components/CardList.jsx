@@ -2,21 +2,8 @@ import React, { useContext, useEffect } from 'react';
 import Button from './Button';
 import PeopleContext from '../context/PeopleContext';
 
-const people = [
-	{ name: 'Owen Lars', height: 178, gender: 'male' },
-	{ name: 'Owen Lars', height: 178, gender: 'male' },
-	{ name: 'Owen Lars', height: 178, gender: 'male' },
-	{ name: 'Owen Lars', height: 178, gender: 'male' },
-];
-
 const Card = (props) => {
 	const { name, height, gender } = props;
-
-	const people = useContext(PeopleContext);
-
-	useEffect(() => {
-		people.getPeople();
-	}, []);
 
 	return (
 		<div className="flex border-solid border-gray-200 border-2 p-4 rounded-lg mb-2">
@@ -37,10 +24,17 @@ const Card = (props) => {
 };
 
 const CardList = () => {
+	const { people, getPeople } = useContext(PeopleContext);
+
+	useEffect(() => {
+		getPeople();
+	}, []);
+
 	return (
 		<section className="my-4">
 			{people.map((person) => (
 				<Card
+					key={person.name}
 					name={person.name}
 					height={person.height}
 					gender={person.gender}
