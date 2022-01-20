@@ -1,5 +1,6 @@
-import React from 'react';
+import React, { useContext, useEffect } from 'react';
 import Button from './Button';
+import PeopleContext from '../context/PeopleContext';
 
 const people = [
 	{ name: 'Owen Lars', height: 178, gender: 'male' },
@@ -10,6 +11,12 @@ const people = [
 
 const Card = (props) => {
 	const { name, height, gender } = props;
+
+	const people = useContext(PeopleContext);
+
+	useEffect(() => {
+		people.getPeople();
+	}, []);
 
 	return (
 		<div className="flex border-solid border-gray-200 border-2 p-4 rounded-lg mb-2">
