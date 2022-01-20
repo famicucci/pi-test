@@ -1,4 +1,5 @@
 import React from 'react';
+import Button from './Button';
 
 const SearchForm = () => {
 	const onSubmit = (e) => {
@@ -14,12 +15,7 @@ const SearchForm = () => {
 				placeholder="Search..."
 				className="border-solid border-blue-500 border-2 p-2 rounded-lg"
 			/>
-			<button
-				type="submit"
-				className="bg-blue-500 hover:bg-blue-700 text-white p-2 rounded-lg ml-2 font-semibold"
-			>
-				Search
-			</button>
+			<Button content="Search" />
 		</form>
 	);
 };
