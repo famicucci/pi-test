@@ -1,8 +1,15 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import Button from './Button';
+import PeopleContext from '../context/PeopleContext';
 
 const Card = (props) => {
 	const { name, height, gender } = props;
+
+	const { removePerson } = useContext(PeopleContext);
+
+	const handleClick = () => {
+		removePerson(name);
+	};
 
 	return (
 		<div className="flex border-solid border-gray-200 border shadow-md p-4 rounded-lg mb-2">
@@ -16,7 +23,7 @@ const Card = (props) => {
 				</p>
 			</div>
 			<div>
-				<Button content="Delete" />
+				<Button content="Delete" handleClick={handleClick} />
 			</div>
 		</div>
 	);

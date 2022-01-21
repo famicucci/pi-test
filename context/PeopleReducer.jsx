@@ -1,4 +1,4 @@
-import { GET_PEOPLE, HIDE_LOADING } from '../types';
+import { GET_PEOPLE, REMOVE_PERSON, HIDE_LOADING } from '../types';
 
 const ClientesReducer = (state, action) => {
 	switch (action.type) {
@@ -11,6 +11,11 @@ const ClientesReducer = (state, action) => {
 			return {
 				...state,
 				loading: false,
+			};
+		case REMOVE_PERSON:
+			return {
+				...state,
+				people: state.people.filter((person) => person.name !== action.payload),
 			};
 		default:
 			return state;
