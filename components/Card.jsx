@@ -1,5 +1,4 @@
 import React, { useContext } from 'react';
-import Button from './Button';
 import PeopleContext from '../context/people/PeopleContext';
 
 const Card = (props) => {
@@ -23,7 +22,13 @@ const Card = (props) => {
 				</p>
 			</div>
 			<div>
-				<Button content="Delete" handleClick={handleClick} />
+				<button
+					type="button"
+					className="bg-red-500 hover:bg-red-700 transition duration-150 ease-in text-white p-2 rounded-lg ml-2 font-semibold"
+					onClick={handleClick}
+				>
+					Delete
+				</button>
 			</div>
 		</div>
 	);

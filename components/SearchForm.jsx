@@ -1,5 +1,4 @@
 import React, { useState, useContext } from 'react';
-import Button from './Button';
 import { SearchContext } from '../context/SearchContext';
 
 const SearchForm = () => {
@@ -23,10 +22,15 @@ const SearchForm = () => {
 				name="search"
 				value={value}
 				placeholder="Search..."
-				className="border-solid border-blue-500 border p-2 rounded-lg"
+				className="border-solid border border-gray-300 p-2 rounded-lg outline-none focus:border-cyan-500"
 				onChange={onChange}
 			/>
-			<Button content="Search" />
+			<button
+				type="submit"
+				className="bg-cyan-500 hover:bg-cyan-700 transition duration-150 ease-in text-white p-2 rounded-lg ml-2 font-semibold"
+			>
+				Search
+			</button>
 		</form>
 	);
 };
