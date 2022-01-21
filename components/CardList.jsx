@@ -2,9 +2,11 @@ import React, { useContext, useEffect } from 'react';
 import PeopleContext from '../context/PeopleContext';
 import Card from './Card';
 import Pulse from './Pulse';
+import { SearchContext } from '../context/SearchContext';
 
 const CardList = () => {
 	const { people, loading, getPeople } = useContext(PeopleContext);
+	const { search, filterByName } = useContext(SearchContext);
 
 	useEffect(() => {
 		getPeople();
@@ -16,7 +18,7 @@ const CardList = () => {
 		<section className="my-4">
 			{!loading ? (
 				<>
-					{people.map((person) => (
+					{filterByName(people, search).map((person) => (
 						<Card
 							key={person.name}
 							name={person.name}

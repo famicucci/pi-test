@@ -1,11 +1,11 @@
 import React, { useState, useContext } from 'react';
 import Button from './Button';
-import PeopleContext from '../context/PeopleContext';
+import { SearchContext } from '../context/SearchContext';
 
 const SearchForm = () => {
 	const [value, setValue] = useState('');
 
-	const { handleSearch } = useContext(PeopleContext);
+	const { handleSearch } = useContext(SearchContext);
 
 	const onSubmit = (e) => {
 		e.preventDefault();
