@@ -1,6 +1,6 @@
 import CardList from '../components/CardList';
 import SearchForm from '../components/SearchForm';
-import PeopleState from '../context/PeopleState';
+import PeopleState from '../context/people/PeopleState';
 import SearchProvider from '../context/SearchContext';
 
 function App() {

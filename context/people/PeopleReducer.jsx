@@ -1,4 +1,4 @@
-import { GET_PEOPLE, REMOVE_PERSON, HIDE_LOADING } from '../types';
+import { GET_PEOPLE, REMOVE_PERSON, HIDE_LOADING } from '../../types';
 
 const ClientesReducer = (state, action) => {
 	switch (action.type) {

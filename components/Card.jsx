@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
 import Button from './Button';
-import PeopleContext from '../context/PeopleContext';
+import PeopleContext from '../context/people/PeopleContext';
 
 const Card = (props) => {
 	const { name, height, gender } = props;

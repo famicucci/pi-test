@@ -1,5 +1,5 @@
 import React, { useContext, useEffect } from 'react';
-import PeopleContext from '../context/PeopleContext';
+import PeopleContext from '../context/people/PeopleContext';
 import Card from './Card';
 import Pulse from './Pulse';
 import { SearchContext } from '../context/SearchContext';

@@ -1,9 +1,9 @@
 import React, { useReducer } from 'react';
 import PeopleContext from './PeopleContext';
 import PeopleReducer from './PeopleReducer';
-import swapiAxios from '../config/swapiAxios';
+import swapiAxios from '../../config/swapiAxios';
 
-import { GET_PEOPLE, REMOVE_PERSON, HIDE_LOADING } from '../types';
+import { GET_PEOPLE, REMOVE_PERSON, HIDE_LOADING } from '../../types';
 
 const PeopleState = (props) => {
 	const initialState = {
