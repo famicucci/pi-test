@@ -5,7 +5,7 @@ const Card = (props) => {
 	const { name, height, gender } = props;
 
 	return (
-		<div className="flex border-solid border-gray-200 border-2 p-4 rounded-lg mb-2">
+		<div className="flex border-solid border-gray-200 border shadow-md p-4 rounded-lg mb-2">
 			<div className="grow">
 				<h3 className="text-xl font-semibold">{name}</h3>
 				<p>

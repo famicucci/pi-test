@@ -13,7 +13,7 @@ const SearchForm = () => {
 				type="text"
 				name="search"
 				placeholder="Search..."
-				className="border-solid border-blue-500 border-2 p-2 rounded-lg"
+				className="border-solid border-blue-500 border p-2 rounded-lg"
 			/>
 			<Button content="Search" />
 		</form>
