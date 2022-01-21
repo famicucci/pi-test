@@ -1,4 +1,4 @@
-import { GET_PEOPLE } from '../types';
+import { GET_PEOPLE, HIDE_LOADING } from '../types';
 
 const ClientesReducer = (state, action) => {
 	switch (action.type) {
@@ -6,6 +6,11 @@ const ClientesReducer = (state, action) => {
 			return {
 				...state,
 				people: action.payload,
+			};
+		case HIDE_LOADING:
+			return {
+				...state,
+				loading: false,
 			};
 		default:
 			return state;

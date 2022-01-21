@@ -8,6 +8,7 @@ module.exports = {
 		colors: {
 			blue: { 500: '#3b82f6', 700: '#1d4ed8' },
 			gray: { 200: '#e5e7eb' },
+			slate: { 200: '#e2e8f0', 300: '#cbd5e1' },
 			white: '#ffffff',
 		},
 		extend: {},
