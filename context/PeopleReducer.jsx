@@ -1,4 +1,9 @@
-import { GET_PEOPLE, REMOVE_PERSON, HIDE_LOADING } from '../types';
+import {
+	GET_PEOPLE,
+	REMOVE_PERSON,
+	CHANGE_SEARCH,
+	HIDE_LOADING,
+} from '../types';
 
 const ClientesReducer = (state, action) => {
 	switch (action.type) {
@@ -16,6 +21,11 @@ const ClientesReducer = (state, action) => {
 			return {
 				...state,
 				people: state.people.filter((person) => person.name !== action.payload),
+			};
+		case CHANGE_SEARCH:
+			return {
+				...state,
+				search: action.payload,
 			};
 		default:
 			return state;

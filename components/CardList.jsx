@@ -28,8 +28,8 @@ const CardList = () => {
 			) : (
 				<>
 					{[...Array(n)].map((e, i) => (
-						<div className="mb-2">
-							<Pulse key={i} />
+						<div className="mb-2" key={i}>
+							<Pulse />
 						</div>
 					))}
 				</>
