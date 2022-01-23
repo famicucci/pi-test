@@ -31,6 +31,10 @@ const PeopleState = (props) => {
 				type: ADD_MSG,
 				payload: 'There was an error',
 			});
+
+			dispatch({
+				type: HIDE_LOADING,
+			});
 		}
 	};
 
@@ -46,6 +50,7 @@ const PeopleState = (props) => {
 			value={{
 				people: state.people,
 				loading: state.loading,
+				msg: state.msg,
 				getPeople,
 				removePerson,
 			}}

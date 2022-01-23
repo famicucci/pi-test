@@ -3,9 +3,10 @@ import PeopleContext from '../context/people/PeopleContext';
 import Card from './Card';
 import Pulse from './Pulse';
 import { SearchContext } from '../context/SearchContext';
+import MsgError from './MsgError';
 
 const CardList = () => {
-	const { people, loading, getPeople } = useContext(PeopleContext);
+	const { people, loading, msg, getPeople } = useContext(PeopleContext);
 	const { search, filterByName } = useContext(SearchContext);
 
 	useEffect(() => {
@@ -36,6 +37,7 @@ const CardList = () => {
 					))}
 				</>
 			)}
+			{!loading && msg ? <MsgError content={msg} /> : null}
 		</section>
 	);
 };
