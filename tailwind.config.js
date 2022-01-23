@@ -11,7 +11,17 @@ module.exports = {
 			red: { 500: '#ef4444', 700: '#b91c1c' },
 			white: '#ffffff',
 		},
-		extend: {},
+		extend: {
+			keyframes: {
+				wiggle: {
+					'0%, 100%': { transform: 'rotate(-3deg)' },
+					'50%': { transform: 'rotate(3deg)' },
+				},
+			},
+			animation: {
+				wiggle: 'wiggle 500ms ease-in-out',
+			},
+		},
 	},
 	plugins: [],
 };
